@@ -1,9 +1,24 @@
 import React from 'react';
-import { render } from '@testing-library/react';
 import App from './App';
+import TopBar from './containers/topbar';
+import { shallow } from 'enzyme';
 
-test('renders learn react link', () => {
-  const { getByText } = render(<App />);
-  const linkElement = getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
-});
+describe('App',()=>{
+	it('renders without crashing', ()=>{
+		const appWrapper = shallow(<App/>);
+	});
+
+	it('checks for topbar', ()=>{
+		const appWrapper = shallow(<App/>);
+		const bar = appWrapper.find(TopBar);
+		console.log(bar)
+
+		expect(bar).toHaveLength(1);
+	});
+
+	it('checks for brand in navbar', ()=>{
+		const appWrapper = shallow(<TopBar/>);
+
+		expect(appWrapper.text()).toContain('Sports Center');
+	});
+})

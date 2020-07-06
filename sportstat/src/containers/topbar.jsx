@@ -6,7 +6,7 @@ import './topbar.css';
 function TopBar() {
   return (
     <Navbar bg="light" expand="lg">
-	  <Navbar.Brand href="#home">Sports Center</Navbar.Brand>
+	  <Navbar.Brand id='brand' href="#home">Sports Center</Navbar.Brand>
 	  <Navbar.Toggle aria-controls="basic-navbar-nav" />
 	  <Navbar.Collapse id="basic-navbar-nav">
 	    <Nav id='hnavlink' className="ml-auto">
