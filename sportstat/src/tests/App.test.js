@@ -1,6 +1,6 @@
 import React from 'react';
-import App from './App';
-import TopBar from './containers/topbar';
+import App from '../App';
+import TopBar from '../containers/topbar';
 import { shallow } from 'enzyme';
 
 describe('App',()=>{
