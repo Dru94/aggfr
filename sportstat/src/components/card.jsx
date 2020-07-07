@@ -1,7 +1,7 @@
 import React from 'react';
 import {Card, CardDeck, Container} from 'react-bootstrap';
 import '../assets/styles/card.css';
-import Girl from '../assets/images/girl.jpg';
+import Field from '../assets/images/fields.jpg';
 
 
 
@@ -10,7 +10,7 @@ function SportCard() {
   	<Container fluid>
   		<CardDeck id='carddeck'>
   		<Card className="bg-dark text-white">
-		  	<Card.Img src={Girl} alt="Card image" />
+		  	<Card.Img src={Field} alt="Card image" />
 		  		<Card.ImgOverlay>
 		  			<Card.Title>Card title</Card.Title>
 		  			<Card.Text>
@@ -22,7 +22,7 @@ function SportCard() {
 		</Card>
 
   		<Card className="bg-dark text-white">
-		  	<Card.Img src={Girl} alt="Card image" />
+		  	<Card.Img src={Field} alt="Card image" />
 		  		<Card.ImgOverlay>
 		  			<Card.Title>Card title</Card.Title>
 		  			<Card.Text>
@@ -34,7 +34,7 @@ function SportCard() {
 		</Card>
 
   		<Card className="bg-dark text-white">
-		  	<Card.Img src={Girl} alt="Card image" />
+		  	<Card.Img src={Field} alt="Card image" />
 		  		<Card.ImgOverlay>
 		  			<Card.Title>Card title</Card.Title>
 		  			<Card.Text>
@@ -46,7 +46,7 @@ function SportCard() {
 		</Card>
 
   		<Card className="bg-dark text-white">
-		  	<Card.Img src={Girl} alt="Card image" />
+		  	<Card.Img src={Field} alt="Card image" />
 		  		<Card.ImgOverlay>
 		  			<Card.Title>Card title</Card.Title>
 		  			<Card.Text>
