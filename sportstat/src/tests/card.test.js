@@ -3,9 +3,10 @@ import SportCard from '../components/card';
 import { shallow } from 'enzyme';
 
 
-describe('Sports display cards', () =>{
-	
-	it('renders without crashing', ()=>{
-		const appWrapper = shallow(<SportCard/>);
-	});
+describe('SportCard', () =>{
+	it('tests if component renders before componentDidMount method', () => {
+		let appWrapper=shallow(<SportCard/>, { disableLifecycleMethods: true })
+
+		expect(appWrapper.text()).toEqual('LOADING...')
+	})
 })

@@ -21,7 +21,7 @@ class SportCard extends React.Component{
 
 	render(){
 		if(this.state.loading){
-			return(<div><p>LOADING.....</p></div>);
+			return(<div><p>LOADING...</p></div>);
 		}
 		else if(!this.state.sports){
 			return(<div><p>No employees</p></div>);
