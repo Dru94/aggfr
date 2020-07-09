@@ -1,7 +1,7 @@
 import React from 'react';
-import {Card, CardDeck, Container} from 'react-bootstrap';
+import {Card, Container, Row, Col} from 'react-bootstrap';
 import '../assets/styles/card.css';
-import Field from '../assets/images/fields.jpg';
+
 
 
 
@@ -28,7 +28,28 @@ class SportCard extends React.Component{
 		}
 		else {
 			return(
-				<div>{this.state.sports.map( s => <h3 key={s.idSport}>{s.strSport}</h3>)}</div>
+				<Container fluid>
+					<Row>
+						{this.state.sports.map( s => 
+							<Col md={3} id='column' className='hvr-grow'>
+							{/* add onclicekd to sport detail in anchor */} 	
+								<a href="#soccer">
+									<Card className="bg-dark text-white" key={s.idSport} id='card'>
+									  <Card.Img src={s.strSportThumb} alt="Card image" />
+									  <Card.ImgOverlay>
+									    <Card.Title>{s.strSport}</Card.Title>
+									    <Card.Text>
+									      
+									    </Card.Text>
+									    
+									  </Card.ImgOverlay>
+									</Card>
+								</a>
+							</Col>
+						)}
+					</Row>
+					
+				</Container>
 			);
 		}	
   }

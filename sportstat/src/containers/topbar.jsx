@@ -11,6 +11,7 @@ function TopBar() {
 	  <Navbar.Collapse id="basic-navbar-nav">
 	    <Nav id='hnavlink' className="ml-auto">
 	      <Nav.Link  href="#home">Home</Nav.Link>
+	      
 	    </Nav>
 	    <Form inline>
 	      <InputGroup className="">
