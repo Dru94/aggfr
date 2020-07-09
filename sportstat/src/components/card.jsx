@@ -5,61 +5,33 @@ import Field from '../assets/images/fields.jpg';
 
 
 
-function SportCard() {
-  return (
-  	<Container fluid>
-  		<CardDeck id='carddeck'>
-  		<Card className="bg-dark text-white">
-		  	<Card.Img src={Field} alt="Card image" />
-		  		<Card.ImgOverlay>
-		  			<Card.Title>Card title</Card.Title>
-		  			<Card.Text>
-		  				This is a wider card with supporting text below as a natural lead-in to
-		  				additional content. This content is a little bit longer.
-		  			</Card.Text>
-		  			<Card.Text>Last updated 3 mins ago</Card.Text>
-			</Card.ImgOverlay>
-		</Card>
+class SportCard extends React.Component{
+	constructor(props){
+		super(props)
+		this.state={ loading:true, sports:null };
+	}
 
-  		<Card className="bg-dark text-white">
-		  	<Card.Img src={Field} alt="Card image" />
-		  		<Card.ImgOverlay>
-		  			<Card.Title>Card title</Card.Title>
-		  			<Card.Text>
-		  				This is a wider card with supporting text below as a natural lead-in to
-		  				additional content. This content is a little bit longer.
-		  			</Card.Text>
-		  			<Card.Text>Last updated 3 mins ago</Card.Text>
-			</Card.ImgOverlay>
-		</Card>
+	async componentDidMount(){
+		const url = 'https://www.thesportsdb.com/api/v1/json/1/all_sports.php';
+		const response = await fetch(url);
+		const data = await response.json();
 
-  		<Card className="bg-dark text-white">
-		  	<Card.Img src={Field} alt="Card image" />
-		  		<Card.ImgOverlay>
-		  			<Card.Title>Card title</Card.Title>
-		  			<Card.Text>
-		  				This is a wider card with supporting text below as a natural lead-in to
-		  				additional content. This content is a little bit longer.
-		  			</Card.Text>
-		  			<Card.Text>Last updated 3 mins ago</Card.Text>
-			</Card.ImgOverlay>
-		</Card>
+		this.setState({sports:data.sports, loading: false});
+	}
 
-  		<Card className="bg-dark text-white">
-		  	<Card.Img src={Field} alt="Card image" />
-		  		<Card.ImgOverlay>
-		  			<Card.Title>Card title</Card.Title>
-		  			<Card.Text>
-		  				This is a wider card with supporting text below as a natural lead-in to
-		  				additional content. This content is a little bit longer.
-		  			</Card.Text>
-		  			<Card.Text>Last updated 3 mins ago</Card.Text>
-			</Card.ImgOverlay>
-		</Card>						
-	</CardDeck>	
-  	</Container>
-  	
-  );
+	render(){
+		if(this.state.loading){
+			return(<div><p>LOADING.....</p></div>);
+		}
+		else if(!this.state.sports){
+			return(<div><p>No employees</p></div>);
+		}
+		else {
+			return(
+				<div>{this.state.sports.map( s => <h3 key={s.idSport}>{s.strSport}</h3>)}</div>
+			);
+		}	
+  }
 }
 
 export default SportCard;

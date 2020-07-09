@@ -4,7 +4,7 @@ import SportCard from '../../components/card';
 function Main(){
 	return(
 		<React.Fragment>
-			<SportCard/>
+			<SportCard title='Football'/>
 		</React.Fragment>
 		
 		);
