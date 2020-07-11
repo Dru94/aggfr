@@ -31,10 +31,10 @@ class SportCard extends React.Component{
 				<Container fluid>
 					<Row>
 						{this.state.sports.map( s => 
-							<Col md={3} id='column' className='hvr-grow'>
+							<Col md={3} id='column' className='hvr-grow' key={s.idSport}>
 							{/* add onclicekd to sport detail in anchor */} 	
 								<a href="#soccer">
-									<Card className="bg-dark text-white" key={s.idSport} id='card'>
+									<Card className="bg-dark text-white" id='card'>
 									  <Card.Img src={s.strSportThumb} alt="Card image" />
 									  <Card.ImgOverlay>
 									    <Card.Title>{s.strSport}</Card.Title>
