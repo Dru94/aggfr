@@ -1,8 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import './assets/styles/App.css';
-import TopBar from './containers/topbar.jsx';
-import Main from './containers/main/main.jsx';
+import TopBar from './components/topbar.jsx';
+import Footer from './components/footer.jsx';
+import Main from './components/main/main.jsx';
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
 	  		<React.Fragment>
 	  			<TopBar/>
 	  			<Route exact path="/" component={Main}/>
-	  			<Route path='*' component={ ()=> <h3>The Page You Requested Does Not Exist.</h3> }/>
+	  			<Footer/>
 	  		</React.Fragment>
 	  	</Switch>
   	</Router>

@@ -1,6 +1,6 @@
-import React from 'react';
+	import React from 'react';
 import {Card, Container, Row, Col} from 'react-bootstrap';
-import '../assets/styles/card.css';
+import '../../assets/styles/card.css';
 
 
 
@@ -24,7 +24,7 @@ class SportCard extends React.Component{
 			return(<div><p>LOADING...</p></div>);
 		}
 		else if(!this.state.sports){
-			return(<div><p>No employees</p></div>);
+			return(<div><p>No Material Found</p></div>);
 		}
 		else {
 			return(

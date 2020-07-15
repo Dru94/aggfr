@@ -1,0 +1,25 @@
+#cont{
+	text-align: center;
+	background: #114c7a;
+	color: #ffff;
+}
+#list{
+	text-align: left;
+	list-style-type: none;
+	padding-top: 0.5em;
+}
+#listlink{
+	color: #fff;
+}
+#listlink:hover{
+	color: #3366ff;
+}
+#heading{
+	border-bottom: 2px solid white;
+	padding: 0.5em 0 0.5em;
+}
+#v1{
+	background: #11385c;
+	padding-top: 1em;
+
+}

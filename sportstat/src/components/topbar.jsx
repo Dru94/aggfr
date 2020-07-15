@@ -1,7 +1,7 @@
 import React from 'react';
 import { InputGroup, Navbar, FormControl, Form, Nav } from 'react-bootstrap';
 import {FaSearch} from 'react-icons/fa'
-import './topbar.css';
+import '../assets/styles/topbar.css';
 
 function TopBar() {
   return (
