@@ -5,14 +5,21 @@ import TopBar from './components/topbar.jsx';
 import Footer from './components/footer.jsx';
 import Main from './components/main/main.jsx';
 
+const style = {
+	background:'#f7fcfe'
+}
+
 function App() {
+
   return (
   	<Router>
 	  	<Switch>
 	  		<React.Fragment>
-	  			<TopBar/>
-	  			<Route exact path="/" component={Main}/>
-	  			<Footer/>
+		  		<div style={style}>
+		  			<TopBar/>
+		  			<Route exact path="/" component={Main}/>
+		  			<Footer/>
+		  		</div>
 	  		</React.Fragment>
 	  	</Switch>
   	</Router>

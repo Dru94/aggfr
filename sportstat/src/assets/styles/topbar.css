@@ -1,3 +1,61 @@
+#navbar{
+	 background: #36648B;
+}
+
+#brand{
+	color:#fff;
+}
 #hnavlink{
-	margin-right: 2em;
+	color:#fff;
+	padding: 1em;	
+}
+#hnavlink:hover{
+	color:#fff;
+	text-decoration: underline;
+	text-decoration-color: #fff;	
+}
+#searchRes{
+	background: #fff;
+}
+#searchlist{
+	list-style-type: none;
+}
+#teamP{
+	color: black;		
+}
+#errorRes{
+	margin-left:5px;
+	background:#fff;
+	color: red;
+	text-align: center;
+	font-style: italic;
+	width: 250px;
+}
+
+@media only screen and (min-width: 992px) {
+	#navbar{
+		height: 6em;
+	}
+	#input{
+	margin-left: 15em;
+	width: 500px;
+	}
+	#searchRes{
+		margin-top: 235px;
+		margin-left: -500px;
+		height:200px;
+		width: 500px;		
+		background: #fff;
+
+	}
+	#errorRes{
+		color: red;
+		text-align: center;
+		font-style: italic;
+		margin-top: 75px;
+		margin-left: -490px;
+		width: 300px;		
+		background: #fff;
+
+	}
 }

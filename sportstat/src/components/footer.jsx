@@ -7,14 +7,11 @@ import {Container, Row, Col} from 'react-bootstrap';
 
 function Footer(){
 	const [competitions, setCompetitions] = useState([])
-	const [loading, setLoading] = useState(true)
 
 	useEffect( () => {
 		axios.get('https://www.thesportsdb.com/api/v1/json/1/all_leagues.php')
 		.then(res => {
-			console.log(res.data.leagues)
 			setCompetitions(res.data.leagues)
-			setLoading(false)
 		})
 		.catch( err => {
 			console.log(err)
@@ -46,12 +43,12 @@ function Footer(){
 					<Row>
 						<Col md={6}>
 							<ul id='list'>
-								{competitions.map( leg => (<a href="" id="listlink"><li key={leg.idLeague}>{leg.strLeague}</li></a>)).slice(0,6)}
+								{competitions.map( leg => (<a href="#leagueDetails" id="listlink" key={leg.idLeague}><li >{leg.strLeague}</li></a>)).slice(0,6)}
 							</ul>
 						</Col>
 						<Col md={6}>
 							<ul id='list'>
-								{competitions.map( leg => (<a href="" id="listlink"><li key={leg.idLeague}>{leg.strLeague}</li></a>)).slice(6,12)}
+								{competitions.map( leg => (<a href="#leagueDetails" id="listlink" key={leg.idLeague}><li>{leg.strLeague}</li></a>)).slice(6,12)}
 							</ul>
 						</Col>
 					</Row>	

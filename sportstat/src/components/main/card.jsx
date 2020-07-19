@@ -1,4 +1,4 @@
-	import React from 'react';
+import React from 'react';
 import {Card, Container, Row, Col} from 'react-bootstrap';
 import '../../assets/styles/card.css';
 
