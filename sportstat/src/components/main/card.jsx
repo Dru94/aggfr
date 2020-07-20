@@ -1,8 +1,7 @@
 import React from 'react';
 import {Card, Container, Row, Col} from 'react-bootstrap';
 import '../../assets/styles/card.css';
-
-
+import SportSkeleton from '../skeleton/homeSkeleton';
 
 
 class SportCard extends React.Component{
@@ -21,7 +20,9 @@ class SportCard extends React.Component{
 
 	render(){
 		if(this.state.loading){
-			return(<div><p>LOADING...</p></div>);
+			return(
+				<SportSkeleton/>
+			)
 		}
 		else if(!this.state.sports){
 			return(<div><p>No Material Found</p></div>);
@@ -31,7 +32,7 @@ class SportCard extends React.Component{
 				<Container fluid>
 					<Row>
 						{this.state.sports.map( s => 
-							<Col md={3} id='column' className='hvr-grow' key={s.idSport}>
+							<Col md={3} xs={6} id='column' className='hvr-grow' key={s.idSport}>
 							{/* add onclicekd to sport detail in anchor */} 	
 								<a href="#soccer">
 									<Card className="bg-dark text-white" id='card'>

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import FooterSkeleton from './skeleton/footerSkeleton';
 import '../assets/styles/footer.css';
 import {Container, Row, Col} from 'react-bootstrap';
 
@@ -7,18 +8,26 @@ import {Container, Row, Col} from 'react-bootstrap';
 
 function Footer(){
 	const [competitions, setCompetitions] = useState([])
+	const [loading, setLoading] = useState([true]) 
 
 	useEffect( () => {
 		axios.get('https://www.thesportsdb.com/api/v1/json/1/all_leagues.php')
 		.then(res => {
 			setCompetitions(res.data.leagues)
+			setLoading(false)
 		})
 		.catch( err => {
 			console.log(err)
 		})
 	}, [])
 
-	return(
+	if(loading){
+		return(
+			<FooterSkeleton/>
+		);
+	}
+	else{
+		return(
 		<Container fluid id='cont'>
 
 			<Row>
@@ -59,6 +68,7 @@ function Footer(){
 			</Row>
 		</Container>
 	);
+	}
 }
 
 export default Footer;
