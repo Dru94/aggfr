@@ -1,0 +1,32 @@
+#eventSrch{
+	padding-left:2em; 
+}
+#eventList{
+	text-align: center;
+	
+}
+.moreEventListShow{
+	height:0;
+	visibility: hidden;
+	background-color: #fff;
+	transition-property: height;
+	transition-duration: 2s;
+	-moz-transition-duration:2s;
+	-o-transition-duration:2s;
+}
+.moreEventListHide{
+	height: 200px;
+	background-color: red;
+	visibility: visible;
+	transition-property: height;
+	transition-duration: 2s;
+	-moz-transition-duration:2s;
+	-o-transition-duration:2s;
+}
+#btn{
+	border-radius: 50px;
+	border-width:3px;
+}
+#morebtn{
+	text-align: center;
+}

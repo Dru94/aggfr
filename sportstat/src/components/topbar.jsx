@@ -1,7 +1,7 @@
 import React, {useState, useEffect,} from 'react';
 import axios from 'axios';
 import { InputGroup, Navbar, FormControl, Form, Nav } from 'react-bootstrap';
-import {FaSearch} from 'react-icons/fa'
+import {FaSearch} from 'react-icons/fa';
 import '../assets/styles/topbar.css';
 
 function Srch(){
