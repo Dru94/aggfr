@@ -5,9 +5,6 @@ import TopBar from './components/topbar.jsx';
 import Footer from './components/footer.jsx';
 import Main from './components/main/main.jsx';
 
-const style = {
-	background:'#f7fcfe'
-}
 
 function App() {
 
@@ -15,7 +12,7 @@ function App() {
   	<Router>
 	  	<Switch>
 	  		<React.Fragment>
-		  		<div style={style}>
+		  		<div className="appArea">
 		  			<TopBar/>
 		  			<Route exact path="/" component={Main}/>
 		  			<Footer/>
