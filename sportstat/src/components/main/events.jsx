@@ -55,10 +55,12 @@ function Events(){
 				</Row>
 				<Row>
 					<Col md={12} id='eventList'>
-						<p>Oh my god i see the way u shine</p>
+						<p>Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, 
+						cuando un impresor (N. del T.</p>
 					</Col>
 					<Col md={12} className={isShowing ? 'moreEventListShow' : 'moreEventListHide'}>
-						<p>Fuck with me u know i got it</p>
+						<p>Es un hecho establecido hace demasiado tiempo que un lector se distraerá con 
+						el contenido del texto de un sitio mientras que mira su diseño.</p>
 					</Col>
 					<Col md={12} id='morebtn'>
 						<Button id='btn' variant='outline-secondary' size='sm' onClick={handleClick}>

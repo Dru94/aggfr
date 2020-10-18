@@ -30,7 +30,7 @@ function Results(){
 			return(
 		<div className='result'>	
 			{team.map((t)=>(
-				<p key={t.idTeam}>{t.strTeam}</p>
+				<p key={t.idTeam} >{t.strTeam}</p>
 				))}
 		</div>
 			);		

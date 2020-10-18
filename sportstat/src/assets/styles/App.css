@@ -1,4 +1,7 @@
+*{
+	margin: 0;
+	padding: 0;
+}
 .appArea{
 	background:'#f7fcfe';
-	margin: 0;
 }

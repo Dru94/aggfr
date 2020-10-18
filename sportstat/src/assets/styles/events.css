@@ -16,7 +16,10 @@
 }
 .moreEventListHide{
 	height: 200px;
-	background-color: red;
+	padding: 20px;
+	text-align: center;
+	color: white;
+	background-color: #48484a;
 	visibility: visible;
 	transition-property: height;
 	transition-duration: 2s;
