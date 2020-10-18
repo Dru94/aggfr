@@ -14,7 +14,7 @@ function App() {
 	  		<React.Fragment>
 		  		<div className="appArea">
 		  			<TopBar/>
-		  			<Route exact path="/main" component={Main}/>
+		  			<Main/>
 		  			<Footer/>
 		  		</div>
 	  		</React.Fragment>
